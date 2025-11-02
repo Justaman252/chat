@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LocalStorage PC Controller</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="login-card">
+    <h1>Login</h1>
+    <input type="text" id="nickname" placeholder="Nickname"><br>
+    <input type="password" id="password" placeholder="Password"><br>
+    <button id="login-btn">Login</button>
+    <p id="error-msg" class="error"></p>
+    <p>Accounts: <strong>pc/admin</strong>, <strong>phone/admin1</strong></p>
+</div>
+
+<div id="control-card" style="display:none;">
+    <h1>Controller</h1>
+    <p>Logged in as: <span id="user-name"></span> <button id="logout-btn">Logout</button></p>
+
+    <select id="command-select">
+        <option value="hello">hello</option>
+        <option value="list">list</option>
+        <option value="custom_echo">custom_echo</option>
+    </select>
+    <input type="text" id="arg" placeholder="Argument (for custom_echo)">
+    <button id="send-btn">Send</button>
+
+    <h3>Output:</h3>
+    <pre id="output"></pre>
+
+    <h3>File Transfer:</h3>
+    <input type="file" id="file-input" multiple><br>
+    <button id="upload-btn">Upload</button>
+
+    <ul id="file-list"></ul>
+
+    <h3>Recent actions:</h3>
+    <ul id="log"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
